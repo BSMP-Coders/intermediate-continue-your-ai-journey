@@ -17,6 +17,8 @@ By the end of this lesson, you'll be able to:
 
 ## 🐢 Turtle Basics
 
+> 🧭 Want to explore more Turtle commands? Check out the official [Turtle documentation](https://docs.python.org/3/library/turtle.html) to see everything you can do — from drawing shapes and handling events to animation tricks!
+
 Open `app.py` and practice these foundational steps:
 
 ### 🐢 Step 1: Import and Create a Turtle
