@@ -17,8 +17,6 @@ By the end of this lesson, you'll be able to:
 
 ## 🐢 Turtle Basics
 
-## 🐢 Turtle Basics
-
 Open `app.py` and practice these foundational steps:
 
 ### Step 1: Import and Set Up Turtle
