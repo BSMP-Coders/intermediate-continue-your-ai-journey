@@ -8,10 +8,10 @@ You're about to explore **Turtle**, a simple yet powerful Python library that he
 
 By the end of this lesson, you'll be able to:
 
-- **Create an animated Turtle game** using Python and GitHub Copilot.
-- **Collaborate on GitHub** by sharing your project and giving constructive feedback.
+* **Create an animated Turtle game** using Python and GitHub Copilot.
+* **Collaborate on GitHub** by sharing your project and giving constructive feedback.
 
-## � Getting Started
+## 🚀 Getting Started
 
 **Recommended:** Use GitHub Codespaces for the best experience - it's pre-configured and ready to go!
 
@@ -19,24 +19,30 @@ By the end of this lesson, you'll be able to:
 
 Open `app.py` and practice these foundational steps:
 
-### Step 1: Import and Set Up Turtle
+### 🐢 Step 1: Import and Create a Turtle
 
 ```python
 import turtle
 
-wn = turtle.Screen()  # Game window
-player = turtle.Turtle()  # Your turtle
+wn = turtle.Screen()  # Creates the game window
+player = turtle.Turtle()  # Creates a turtle
+
+wn.mainloop()  # Keeps the window open
 ```
 
-### Step 2: Customize Your Turtle
+### 🎨 Step 2: Customize the Turtle
+
+Paste the following code just before the `wn.mainloop()` line:
 
 ```python
-player.shape("turtle")  # Turtle shape
-player.color("blue")    # Turtle color
-player.speed(1)         # Movement speed
+player.shape("turtle")     # Changes the shape
+player.color("blue")       # Changes the color
+player.speed(1)            # Sets movement speed
 ```
 
-### Step 3: Move the Turtle
+### 🔄 Step 3: Move the Turtle Around
+
+Paste the following code just before the `wn.mainloop()` line:
 
 ```python
 player.forward(100)  # Move forward
@@ -44,15 +50,19 @@ player.right(90)     # Turn right
 player.forward(100)
 ```
 
-### Step 4: Loops and Shapes
+### 🧠 Step 4: Use Functions and Loops
+
+Paste the following code just before the `wn.mainloop()` line:
 
 ```python
 for _ in range(4):
     player.forward(100)
-    player.right(90)  # Draw square
+    player.right(90)  # Draws a square
 ```
 
-### Step 5: User Input
+### 🕹️ Step 5: Add User Input
+
+Paste the following code just before the `wn.mainloop()` line:
 
 ```python
 def move_up():
@@ -61,7 +71,6 @@ def move_up():
 
 wn.listen()
 wn.onkey(move_up, "Up")
-wn.mainloop()  # Keeps window open
 ```
 
 ## 🚀 GitHub Copilot Editor Suggestions
@@ -69,14 +78,14 @@ wn.mainloop()  # Keeps window open
 To use GitHub Copilot’s inline suggestions in VS Code:
 
 1. Open your Python file (`app.py`) in VS Code.
-2. Press `Ctrl + I` (or `Cmd + I` on Mac) to open the GitHub Copilot inline editor.
+2. Press `Ctrl + I` to open the GitHub Copilot inline editor.
 3. Type one of these prompts into the inline editor to generate code:
 
-- "Make the turtle move smoothly with arrow keys"
-- "Draw random objects on the screen"
-- "Detect collision between objects"
-- "Keep score in the game"
-- "End game when a condition is met"
+* "Make the turtle move smoothly with arrow keys"
+* "Draw random objects on the screen"
+* "Detect collision between objects"
+* "Keep score in the game"
+* "End game when a condition is met"
 
 > These suggestions will help Copilot generate useful functions for your game!
 
@@ -99,8 +108,8 @@ You have two options to run your game:
 
 ### Option 1: VS Code Play Button
 
-- Open `app.py`.
-- Click the green **Run** button in the top right.
+* Open `app.py`.
+* Click the green **Run** button in the top right.
 
 ### Option 2: Terminal
 
@@ -115,22 +124,23 @@ Use GitHub to improve your game through collaboration:
 
 ### Commit and Push
 
-- Open **Source Control** in VS Code.
-- Type a commit message (e.g., "First Turtle game version").
-- Commit and sync your changes.
+* Open **Source Control** in VS Code.
+* Type a commit message (e.g., "First Turtle game version").
+* Commit and sync your changes.
 
 ### Try Another Game
 
-- Clone a classmate's GitHub repository.
-- Open and play their game.
-- Note what you like and suggest improvements.
+* Clone a classmate's GitHub repository.
+* Open and play their game.
+* Note what you like and suggest improvements.
 
 ### Leave Feedback
 
-- Go to their GitHub page, click **Issues** → **New Issue**.
-- Provide specific, helpful feedback.
+* Go to their GitHub page, click **Issues** → **New Issue**.
+* Provide specific, helpful feedback.
 
 > Great collaboration makes great games. Be kind, honest, and specific!
 
 ### Running VSCode Locally
+
 **Alternative:** If you prefer to work locally, see our [📋 Local VS Code Setup Guide](local-setup.md) for Windows installation instructions.
