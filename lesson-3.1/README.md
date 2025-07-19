@@ -15,6 +15,16 @@ By the end of this lesson, you'll be able to:
 
 **Recommended:** Use GitHub Codespaces for the best experience - it's pre-configured and ready to go!
 
+> **Note:** When you start your GitHub Codespace, it may take a few moments for all dependencies and tools to finish installing. Wait until setup completes before you begin coding.
+### 🖥️ View Your Game in the Browser
+
+Once setup is complete and you run your game, look for a "Pygame desktop" entry in the **Ports** tab (usually at the bottom or side of your Codespace window). 
+
+1. Click the **Ports** tab.
+2. Find the row labeled **Pygame desktop**.
+3. Click the **Open in Browser** button (usually a globe icon) next to the port.
+4. After you've opened it in the browser, you will see a list of files and directories. Click on the file labeled **"vnc.html"**. Once that opens, you'll see a big button that says **Connect**—click that button.
+
 ## 🐢 Turtle Basics
 
 > 🧭 Want to explore more Turtle commands? Check out the official [Turtle documentation](https://docs.python.org/3/library/turtle.html) to see everything you can do — from drawing shapes and handling events to animation tricks!
@@ -32,6 +42,11 @@ player = turtle.Turtle()  # Creates a turtle
 wn.mainloop()  # Keeps the window open
 ```
 
+> This will open the Turtle graphics window in your browser so you can see your turtle in action.  
+> To run your Python app, click the **Run and Debug** button (play icon with a bug) on the left sidebar of VS Code. Then, in the Run and Debug window, click the green **play** button to start your app.
+
+> **Note:** If you hit any errors, copy and paste those error messages into Copilot for help. Wait until Copilot is done responding, then click the **Restart** button (🔄) on the bar that appears while the app is running to try again.
+
 ### 🎨 Step 2: Customize the Turtle
 
 Paste the following code just before the `wn.mainloop()` line:
@@ -41,6 +56,8 @@ player.shape("turtle")     # Changes the shape
 player.color("blue")       # Changes the color
 player.speed(1)            # Sets movement speed
 ```
+
+> **Note:** To rerun your application, click the **Restart** button (🔄) on the bar that appears while the app is running.
 
 ### 🔄 Step 3: Move the Turtle Around
 
@@ -74,6 +91,17 @@ def move_up():
 wn.listen()
 wn.onkey(move_up, "Up")
 ```
+
+### 🌐 Step 6: Make Your Game Port Public
+
+To share your running Turtle game with others, you need to make the port public in GitHub Codespaces:
+
+1. Click the **Ports** tab in your Codespace.
+2. Find the row labeled **Pygame desktop**.
+3. **Right-click the lock icon** next to the word "private" in the Visibility column for the port.
+4. Go down to **Port Visibility** and select **Public**.
+
+> Now, anyone with the link can view your game in their browser!
 
 ## 🚀 GitHub Copilot Editor Suggestions
 
