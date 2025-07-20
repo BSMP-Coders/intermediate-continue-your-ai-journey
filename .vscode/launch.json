@@ -5,7 +5,7 @@
             "name": "Python: Launch Turtle Graphics",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/lesson-3.1/main.py",
+            "program": "${workspaceFolder}/lesson-3.1/app.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {
