@@ -32,3 +32,6 @@ Projects can be based on any of the homework assignments or something new. Just 
 ## ✅ Review learning plan
 Complete outstanding learning milestones and get your badges.
 
+
+## Now lets make a pygame
+[Get started with PyGame](./PyGame.md)
