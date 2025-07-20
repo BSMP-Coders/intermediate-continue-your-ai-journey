@@ -132,45 +132,6 @@ Open [app.py](/lesson-2/app.py). Use these Copilot prompts to build your game st
 
 > **💡 Pro Tip:** Turtle is great for beginners. Always run your game after each prompt to check progress!
 
-## ▶️ Running Your Game
-
-You have two options to run your game:
-
-### Option 1: VS Code Play Button
-
-* Open `app.py`.
-* Click the green **Run** button in the top right.
-
-### Option 2: Terminal
-
-```bash
-cd lesson-2
-python app.py
-```
-
-## 🔎 Share & Collaborate with GitHub
-
-Use GitHub to improve your game through collaboration:
-
-### Commit and Push
-
-* Open **Source Control** in VS Code.
-* Type a commit message (e.g., "First Turtle game version").
-* Commit and sync your changes.
-
-### Try Another Game
-
-* Clone a classmate's GitHub repository.
-* Open and play their game.
-* Note what you like and suggest improvements.
-
-### Leave Feedback
-
-* Go to their GitHub page, click **Issues** → **New Issue**.
-* Provide specific, helpful feedback.
-
-> Great collaboration makes great games. Be kind, honest, and specific!
-
 ### Running VSCode Locally
 
 **Alternative:** If you prefer to work locally, see our [📋 Local VS Code Setup Guide](local-setup.md) for Windows installation instructions.
