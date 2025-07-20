@@ -16,9 +16,10 @@ By the end of this lesson, you'll be able to:
 **Recommended:** Use GitHub Codespaces for the best experience - it's pre-configured and ready to go!
 
 > **Note:** When you start your GitHub Codespace, it may take a few moments for all dependencies and tools to finish installing. Wait until setup completes before you begin coding.
+
 ### 🖥️ View Your Game in the Browser
 
-Once setup is complete and you run your game, look for a "Pygame desktop" entry in the **Ports** tab (usually at the bottom or side of your Codespace window). 
+Once setup is complete and you run your game, look for a "Pygame desktop" entry in the **Ports** tab (usually at the bottom or side of your Codespace window).
 
 1. Click the **Ports** tab.
 2. Find the row labeled **Pygame desktop**.
@@ -33,6 +34,17 @@ Open `app.py` and practice these foundational steps:
 
 ### 🐢 Step 1: Import and Create a Turtle
 
+Make sure to include the following lines at the very top of your file to enable Turtle to display in the browser window:
+
+> If you're using VS Code locally (not Codespaces), you can skip the `import os` line — it's only needed for browser display in Codespaces.
+
+```python
+import os
+os.environ["DISPLAY"] = ":1"
+```
+
+Then, add your Turtle code:
+
 ```python
 import turtle
 
@@ -42,10 +54,8 @@ player = turtle.Turtle()  # Creates a turtle
 wn.mainloop()  # Keeps the window open
 ```
 
-> This will open the Turtle graphics window in your browser so you can see your turtle in action.  
-> To run your Python app, click the **Run and Debug** button (play icon with a bug) on the left sidebar of VS Code. Then, in the Run and Debug window, click the green **play** button to start your app.
-
-> **Note:** If you hit any errors, copy and paste those error messages into Copilot for help. Wait until Copilot is done responding, then click the **Restart** button (🔄) on the bar that appears while the app is running to try again.
+> This will open the Turtle graphics window in your browser so you can see your turtle in action.
+> To run your Python app, simply click the **Run** (green play) button directly above the `app.py` file in VS Code.
 
 ### 🎨 Step 2: Customize the Turtle
 
@@ -57,7 +67,7 @@ player.color("blue")       # Changes the color
 player.speed(1)            # Sets movement speed
 ```
 
-> **Note:** To rerun your application, click the **Restart** button (🔄) on the bar that appears while the app is running.
+> **Note:** To apply your latest changes, just click the **Run** (green play) button again above your file. In the browser, you may need to move your mouse over the Turtle window to refresh the display.
 
 ### 🔄 Step 3: Move the Turtle Around
 
@@ -108,8 +118,8 @@ To share your running Turtle game with others, you need to make the port public 
 To use GitHub Copilot’s inline suggestions in VS Code:
 
 1. Open your Python file (`app.py`) in VS Code.
-2. Press `Ctrl + I` to open the GitHub Copilot inline editor.
-3. Type one of these prompts into the inline editor to generate code:
+2. Press `Ctrl + I` (or `Cmd + I` on Mac) to open the GitHub Copilot inline chat.
+3. In the prompt area that appears, type one of these requests:
 
 * "Make the turtle move smoothly with arrow keys"
 * "Draw random objects on the screen"
@@ -121,7 +131,24 @@ To use GitHub Copilot’s inline suggestions in VS Code:
 
 ## 🕹️ Choose Your Turtle Game!
 
-Open [app.py](/lesson-2/app.py). Use these Copilot prompts to build your game step by step:
+Create a new Python file called `MyGame.py`. Then copy and paste this full example to get started:
+
+```python
+# If you're using GitHub Codespaces, include these two lines to enable Turtle graphics in the browser:
+import os
+os.environ["DISPLAY"] = ":1"
+
+import turtle
+
+wn = turtle.Screen()  # Creates the game window
+player = turtle.Turtle()  # Creates a turtle
+
+wn.mainloop()  # Keeps the window open
+```
+
+If you're working locally, you can skip the `import os` lines.
+
+> Here are some prompts you can try in the Copilot inline agent to help build your full game:
 
 | 🐢 Game                | 🎯 What You'll Build                        | 🚀 Step-by-Step Prompts                                                                                 |
 | ---------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -132,6 +159,8 @@ Open [app.py](/lesson-2/app.py). Use these Copilot prompts to build your game st
 
 > **💡 Pro Tip:** Turtle is great for beginners. Always run your game after each prompt to check progress!
 
-### Running VSCode Locally
+### 💻 Running VS Code Locally
 
-**Alternative:** If you prefer to work locally, see our [📋 Local VS Code Setup Guide](local-setup.md) for Windows installation instructions.
+**Want to build a game on your own computer?** Working locally is a great option—especially if you're building a more advanced project or working on your coding challenge project. You'll have full control, faster performance, and no need to rely on the cloud.
+
+Check out our [📋 Local VS Code Setup Guide](local-setup.md) to get started on Windows. It's a solid choice if you want to level up your game development setup!
