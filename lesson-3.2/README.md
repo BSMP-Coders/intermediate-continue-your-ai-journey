@@ -32,6 +32,8 @@ Projects can be based on any of the homework assignments or something new. Just 
 ## ✅ Review learning plan
 Complete outstanding learning milestones and get your badges.
 
+## Examples from Last Year
+[Videos From Last Year](https://bsmp-coders.github.io/#/2025/program/final_projects?id=%f0%9f%8e%93-intermediate-past-submissions)
 
 ## Now lets make a pygame
 [Get started with PyGame](./PyGame.md)
