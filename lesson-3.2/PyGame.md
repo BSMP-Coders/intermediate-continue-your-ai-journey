@@ -1,4 +1,4 @@
-# 🎮 Week 3, Lesson 2: Build a Pygame Using GitHub Copilot Inline Editor
+# 🎮 Week 3, Lesson 2: Build Pong with GitHub Copilot in Agent Mode
 
 ## 💻 Step 1: Choose How to Run Your Game
 
@@ -6,21 +6,14 @@ You have two options for running your game. We encourage you to try the local se
 
 ### 🖥️ Option 1: Run Locally with VS Code
 
-Want to build a more advanced game on your own computer?
-
-Working locally gives you faster performance and full control — a great option for your coding challenge project!
-
+Want to build a more advanced game on your own computer? Working locally gives you faster performance and full control — a great option for your coding challenge project!
 👉 Follow our [📋 Local Setup Guide](local-setup.md) to get started on Windows.
-
----
 
 ### 🌐 Option 2: Run in the Browser with GitHub Codespaces
 
-If you don't want to set things up locally, you can continue using **GitHub Codespaces** right in your browser — just like in previous lessons. It’s pre-configured and ready to go!
+If you don't want to set things up locally, you can continue using **GitHub Codespaces** in your browser — just like in previous lessons.
 
-> ⏳ *Heads up:* When your Codespace starts, it may take a minute to finish setting everything up. Wait until it’s ready before writing code.
-
-> 💡 *If you're using GitHub Codespaces, you need to add the following lines at the top of your file to enable graphics display in the browser.*
+> 💡 *If you're using GitHub Codespaces, you need to add the following lines at the top of your file to enable graphics display in the browser:*
 
 ```python
 # Only needed if you're running in GitHub Codespaces
@@ -30,99 +23,78 @@ os.environ["DISPLAY"] = ":1"
 
 ---
 
-## Welcome to Your First Game with Pygame and Copilot Inline
+## 🧠 How This Lesson Works
 
-In this lesson, you’ll build a simple interactive game using **GitHub Copilot’s inline chat editor** in Visual Studio Code. Instead of writing out full code or comments, you'll use **natural language prompts directly in the inline editor** to ask Copilot for help — step by step.
+In this lesson, you’ll build and continuously improve a version of **Pong** using **GitHub Copilot’s chat-based agent** in VS Code.
 
-## 🧠 How It Works
+### To Use GitHub Copilot Chat Agent:
 
-1. Open your Python file: `app.py`
-2. Place your cursor where you want code to appear
-3. Press `Ctrl + I` or right-click and choose **Copilot: Open Inline Chat**
-4. Type your request in natural language (e.g., “create a game loop that quits when you close the window”)
-5. Review and insert the Copilot-generated code
+1. Open your project in VS Code
+2. Open the Copilot Chat pane (use the sidebar icon or press `Ctrl + '`)
+3. Use plain English to describe what you want to build or change
+4. Copilot will suggest code or updates directly in your file
 
-## 🛠️ First: Set Up Your Game File
-
-Add this starter block at the top of your file:
-
-```python
-# Only needed if you're using GitHub Codespaces
-import os
-os.environ["DISPLAY"] = ":1"
-
-import pygame
-import sys
-pygame.init()
-screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("My Game")
-clock = pygame.time.Clock()
-running = True
-```
+You can also right-click inside your file and choose **"Ask Copilot"** to ask questions about your code or request edits.
 
 ---
 
-## 💬 Step-by-Step Copilot Tasks Using the Inline Editor
+## 🏓 Step 1: Generate a Basic Pong Game
 
-### 🎯 Step 1: Create the Game Loop
+Ask Copilot in the chat:
 
-Use Copilot Inline Chat:
+> **“Create a basic Pong game in Python with Pygame. Include two paddles, a bouncing ball, and keyboard controls for each player.”**
 
-> “Create a game loop that handles events and fills the screen white”
-
-Place your cursor under `running = True` and run the inline prompt. Accept the suggested code.
+✅ Run the file and confirm it works. You should see a functional Pong game window.
 
 ---
 
-### 🟦 Step 2: Draw a Player Block
+## 🛠️ Improve Your Pong Game with Copilot Agent
 
-Use Copilot Inline Chat:
+### 🎨 Step 2: Add Colors and Style
 
-> “Create a blue square at the bottom of the screen called player”
+Ask Copilot:
 
-Ask Copilot to create a `pygame.Rect` for the player and draw it in the game loop.
-
----
-
-### 🕹️ Step 3: Add Arrow Key Movement
-
-Use Copilot Inline Chat:
-
-> “Move the player left and right using the arrow keys”
-
-Have Copilot generate code to check for key presses and update the player position.
+> “Add background color and set different colors for paddles and ball.”
 
 ---
 
-### 🔻 Step 4: Create a Falling Obstacle
+### 🧠 Step 3: Add Scoring System
 
-Use Copilot Inline Chat:
+Ask Copilot:
 
-> “Add a red block that falls from the top and resets when off screen”
-
-Ask Copilot to create an obstacle `pygame.Rect`, update its position, and reset it when it goes past the screen.
+> “Add scoring to the Pong game and display each player’s score on the screen.”
 
 ---
 
-### 💥 Step 5: Add Collision Detection
+### 🧲 Step 4: Make the Ball Faster
 
-Use Copilot Inline Chat:
+Ask Copilot:
 
-> “Check if the player collides with the obstacle and end the game”
-
-Have Copilot generate collision logic using `.colliderect()` and stop the loop.
+> “Increase ball speed slightly every time it hits a paddle.”
 
 ---
 
-### 💡 Bonus Copilot Tasks
+### ⏱️ Step 5: Add a Countdown Before Start
 
-Use inline chat to explore any of these features:
+Ask Copilot:
 
-> “Add score and display it on screen”
-> “Play a sound when the player wins”
-> “Spawn multiple falling obstacles”
-> “Show a start screen with a play button”
-> “Restart the game when spacebar is pressed”
+> “Add a 3-second countdown before the game starts and show it on screen.”
+
+---
+
+### 🖱️ Step 6: Add Menu or Restart Button
+
+Ask Copilot:
+
+> “Create a start screen with a ‘Play’ button and allow the player to restart the game after it ends.”
+
+---
+
+### 🔊 Step 7: Add Sound Effects
+
+Ask Copilot:
+
+> “Play a sound when the ball hits a paddle or when someone scores.”
 
 ---
 
@@ -131,7 +103,7 @@ Use inline chat to explore any of these features:
 ### Option 1: Use the Run Button
 
 * Open `app.py`
-* Click the green **Run** button in the top-right corner of VS Code
+* Click the green **Run** button in the top-right of VS Code
 
 ### Option 2: Use the Terminal
 
@@ -142,8 +114,12 @@ python app.py
 
 ---
 
-## 📚 Learn More
+## 📚 Want to Go Further?
 
-Want to get creative? Explore [Pygame Docs](https://www.pygame.org/docs/) to find ways to add images, sounds, animation, or multiple levels.
+Explore [Pygame Docs](https://www.pygame.org/docs/) to:
 
-> ✅ Build your game step by step — test as you go, ask Copilot for help, and have fun making it your own!
+* Add animations or effects
+* Build an AI paddle opponent
+* Create special power-ups or dynamic obstacles
+
+> ✅ Let Copilot help you experiment! Build incrementally, ask for help often, and have fun customizing your game.
