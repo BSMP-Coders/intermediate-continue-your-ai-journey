@@ -36,4 +36,4 @@ Complete outstanding learning milestones and get your badges.
 [Videos From Last Year](https://bsmp-coders.github.io/#/2025/program/final_projects?id=%f0%9f%8e%93-intermediate-past-submissions)
 
 ## Now lets make a pygame
-[Get started with PyGame](./PyGame.md)
+[Get started with PyGame](https://github.com/BSMP-Coders/intermediate-pygame)
