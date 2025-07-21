@@ -148,4 +148,13 @@ Ask Copilot:
 
 > “Build a clicker game where a target randomly appears and you score by clicking it quickly.”
 
+---
+
+### 💭 Things to Think About
+
+* How could you make this game **two-player**?
+* Could you use **images** from your last lesson with Bing Create for your characters or backgrounds?
+* How would you create **levels or a win condition**?
+* Can you design a game that keeps people coming back — with a high score, unlocks, or fun surprises?
+
 > 🧪 Tip: Challenge yourself to invent your own twist on one of these classics. Copilot can help with every step!
