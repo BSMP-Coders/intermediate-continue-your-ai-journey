@@ -1,21 +1,4 @@
-Here's an edited and polished version of your lesson, with tightened language, clarified instructions, and improved flow, while keeping your engaging tone:
-
----
-
-# 🎮 Week 3, Lesson 2: Build a Python Pygame with GitHub Copilot
-
-## Welcome to Your First Game with Pygame!
-
-You're about to explore **Pygame**, a beginner-friendly Python library that lets you create fun, interactive games with graphics, sound, and keyboard controls. In this lesson, you'll go from zero to a working game, using GitHub Copilot as your coding sidekick.
-
-## 🎯 Lesson Objectives
-
-By the end of this lesson, you'll be able to:
-
-* 🎮 **Create an interactive Pygame project** using Python and GitHub Copilot.
-* 🤝 **Collaborate on GitHub** by sharing your project and giving feedback.
-
----
+# 🎮 Week 3, Lesson 2: Build a Pygame Using GitHub Copilot Inline Editor
 
 ## 💻 Step 1: Choose How to Run Your Game
 
@@ -47,182 +30,120 @@ os.environ["DISPLAY"] = ":1"
 
 ---
 
-### 🖥️ View Your Game in the Browser (Codespaces)
+## Welcome to Your First Game with Pygame and Copilot Inline
 
-Once your Codespace is set up and running:
+In this lesson, you’ll build a simple interactive game using **GitHub Copilot’s inline chat editor** in Visual Studio Code. Instead of writing out full code or comments, you'll use **natural language prompts directly in the inline editor** to ask Copilot for help — step by step.
 
-1. Click the **Ports** tab (bottom or side of the Codespace).
-2. Find the row labeled **Pygame desktop**.
-3. Click the 🌐 **Open in Browser** icon.
-4. In the new tab, click on **vnc.html**, then hit the **Connect** button.
+## 🧠 How It Works
 
-This opens a virtual desktop where your Pygame window will appear!
+1. Open your Python file: `app.py`
+2. Place your cursor where you want code to appear
+3. Press `Ctrl + I` or right-click and choose **Copilot: Open Inline Chat**
+4. Type your request in natural language (e.g., “create a game loop that quits when you close the window”)
+5. Review and insert the Copilot-generated code
 
----
+## 🛠️ First: Set Up Your Game File
 
-## 🎮 Pygame Basics
-
-> 🧭 *Explore more:* Visit the official [Pygame documentation](https://www.pygame.org/docs/) for examples on sprites, input handling, collision detection, and sound.
-
-Open `app.py` and follow these steps:
-
----
-
-### 🛠️ Step 2: Setup a Game Window
-
-Add this code to start your Pygame window:
+Add this starter block at the top of your file:
 
 ```python
+# Only needed if you're using GitHub Codespaces
 import os
 os.environ["DISPLAY"] = ":1"
 
 import pygame
 import sys
-
-pygame.init()
-screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("My First Pygame")
-
-clock = pygame.time.Clock()
-```
-
-This creates a window that’s 800x600 pixels. Now let’s keep the window running!
-
----
-
-### 🔄 Step 3: Game Loop
-
-Add this after your setup code:
-
-```python
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    screen.fill((255, 255, 255))  # Fills the screen with white
-    pygame.display.flip()        # Updates the screen
-    clock.tick(60)               # Limits to 60 FPS
-
-pygame.quit()
-sys.exit()
-```
-
-Now when you run the file, a window will open and stay responsive.
-
----
-
-### 🐧 Step 4: Draw a Character
-
-Add this above your game loop:
-
-```python
-player = pygame.Rect(375, 500, 50, 50)  # x, y, width, height
-```
-
-Then inside your game loop, after `screen.fill(...)`:
-
-```python
-pygame.draw.rect(screen, (0, 0, 255), player)  # Blue rectangle
-```
-
----
-
-### 🕹️ Step 5: Move with Arrow Keys
-
-Inside your game loop, before `pygame.display.flip()`:
-
-```python
-keys = pygame.key.get_pressed()
-if keys[pygame.K_LEFT]:
-    player.x -= 5
-if keys[pygame.K_RIGHT]:
-    player.x += 5
-```
-
-Run your game and move the block left/right!
-
----
-
-### 🎯 Step 6: Add an Obstacle
-
-Above your loop:
-
-```python
-obstacle = pygame.Rect(375, 0, 50, 50)
-```
-
-Inside your game loop, after drawing the player:
-
-```python
-obstacle.y += 5
-pygame.draw.rect(screen, (255, 0, 0), obstacle)  # Red falling block
-
-# Reset obstacle if it leaves screen
-if obstacle.y > 600:
-    obstacle.y = 0
-```
-
----
-
-### 💥 Step 7: Collision Detection
-
-Inside the game loop, after updating the obstacle:
-
-```python
-if player.colliderect(obstacle):
-    print("Game Over!")
-    running = False
-```
-
----
-
-## 🤖 GitHub Copilot Prompts
-
-Use GitHub Copilot to add new features:
-
-* “Add score and display it on screen”
-* “Play a sound when the player wins”
-* “Spawn multiple obstacles randomly”
-* “Restart the game after losing”
-* “Create a start screen with a play button”
-
-> ✅ Run your game after each change to test it live!
-
----
-
-## 🕹️ Start Your Own Game!
-
-Create a new file: `MyGame.py`, and paste this starter code:
-
-```python
-import os
-os.environ["DISPLAY"] = ":1"
-
-import pygame
-import sys
-
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("My Game")
-
 clock = pygame.time.Clock()
 running = True
-
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    screen.fill((255, 255, 255))
-    pygame.display.flip()
-    clock.tick(60)
-
-pygame.quit()
-sys.exit()
 ```
 
-Use this as your blank slate and start prompting Copilot to build your full game!
+---
+
+## 💬 Step-by-Step Copilot Tasks Using the Inline Editor
+
+### 🎯 Step 1: Create the Game Loop
+
+Use Copilot Inline Chat:
+
+> “Create a game loop that handles events and fills the screen white”
+
+Place your cursor under `running = True` and run the inline prompt. Accept the suggested code.
 
 ---
+
+### 🟦 Step 2: Draw a Player Block
+
+Use Copilot Inline Chat:
+
+> “Create a blue square at the bottom of the screen called player”
+
+Ask Copilot to create a `pygame.Rect` for the player and draw it in the game loop.
+
+---
+
+### 🕹️ Step 3: Add Arrow Key Movement
+
+Use Copilot Inline Chat:
+
+> “Move the player left and right using the arrow keys”
+
+Have Copilot generate code to check for key presses and update the player position.
+
+---
+
+### 🔻 Step 4: Create a Falling Obstacle
+
+Use Copilot Inline Chat:
+
+> “Add a red block that falls from the top and resets when off screen”
+
+Ask Copilot to create an obstacle `pygame.Rect`, update its position, and reset it when it goes past the screen.
+
+---
+
+### 💥 Step 5: Add Collision Detection
+
+Use Copilot Inline Chat:
+
+> “Check if the player collides with the obstacle and end the game”
+
+Have Copilot generate collision logic using `.colliderect()` and stop the loop.
+
+---
+
+### 💡 Bonus Copilot Tasks
+
+Use inline chat to explore any of these features:
+
+> “Add score and display it on screen”
+> “Play a sound when the player wins”
+> “Spawn multiple falling obstacles”
+> “Show a start screen with a play button”
+> “Restart the game when spacebar is pressed”
+
+---
+
+## ▶️ Run Your Game
+
+### Option 1: Use the Run Button
+
+* Open `app.py`
+* Click the green **Run** button in the top-right corner of VS Code
+
+### Option 2: Use the Terminal
+
+```bash
+cd lesson-2
+python app.py
+```
+
+---
+
+## 📚 Learn More
+
+Want to get creative? Explore [Pygame Docs](https://www.pygame.org/docs/) to find ways to add images, sounds, animation, or multiple levels.
+
+> ✅ Build your game step by step — test as you go, ask Copilot for help, and have fun making it your own!
