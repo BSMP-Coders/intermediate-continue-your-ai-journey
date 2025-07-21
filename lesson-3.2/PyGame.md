@@ -114,12 +114,38 @@ python app.py
 
 ---
 
-## 📚 Want to Go Further?
+## 🎮 Want to Build Something Else?
 
-Explore [Pygame Docs](https://www.pygame.org/docs/) to:
+Once you've mastered Pong, try making a new game from scratch with Copilot!
+Here are some fun ideas to get you started:
 
-* Add animations or effects
-* Build an AI paddle opponent
-* Create special power-ups or dynamic obstacles
+### 🦘 Platformer
 
-> ✅ Let Copilot help you experiment! Build incrementally, ask for help often, and have fun customizing your game.
+Ask Copilot:
+
+> “Create a basic 2D platformer game with a character that can jump and land on platforms.”
+
+Bonus:
+
+* Add enemies, coins, or a scrolling background
+* Try levels with increasing difficulty
+
+### 🚗 Racing Game
+
+Ask Copilot:
+
+> “Create a simple top-down racing game where the player avoids obstacles and tracks time.”
+
+### 🐍 Snake Game
+
+Ask Copilot:
+
+> “Make a classic Snake game that grows longer when it eats food.”
+
+### 🎯 Target Clicker
+
+Ask Copilot:
+
+> “Build a clicker game where a target randomly appears and you score by clicking it quickly.”
+
+> 🧪 Tip: Challenge yourself to invent your own twist on one of these classics. Copilot can help with every step!
